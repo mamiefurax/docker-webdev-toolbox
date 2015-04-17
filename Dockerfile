@@ -50,5 +50,7 @@ RUN npm install -g grunt-cli bower yo jshint
 
 RUN gem install sass compass
 
+RUN apt-get -y install sudo
+
 WORKDIR /app
 VOLUME ["/app"]
