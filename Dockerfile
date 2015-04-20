@@ -48,7 +48,8 @@ ENV BUNDLE_APP_CONFIG $GEM_HOME
 
 RUN npm install -g grunt-cli bower yo jshint
 
-RUN gem install sass compass
+RUN sudo su -c "gem install sass"
+RUN sudo su -c "gem install compass"
 
 WORKDIR /app
 VOLUME ["/app"]
