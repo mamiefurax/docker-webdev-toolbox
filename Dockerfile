@@ -51,5 +51,8 @@ RUN npm install -g grunt-cli bower yo jshint
 RUN sudo su -c "gem install sass"
 RUN sudo su -c "gem install compass"
 
+RUN apt-get clean 
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 WORKDIR /app
 VOLUME ["/app"]
